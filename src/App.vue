@@ -1,16 +1,16 @@
 <template>
   <div>
-    <Layout1/>
+    <Layout/>
   </div>
 </template>
 
 <script>
 import Login from './components/login/Login'
-import Layout1 from './components/layout/Layout1'
+import Layout from './components/layout/Layout'
 export default {
   name: 'App',
   components: {
-    Layout1,
+    Layout,
     Login
   }
 }
