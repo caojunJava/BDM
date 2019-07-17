@@ -1,15 +1,14 @@
 <template>
-  <el-container>
-    <el-header>
-      <Header/>
-    </el-header>
-    <el-container>
-      <el-aside>
+    <el-container :style="height">
+      <el-aside width="230px">
         <el-menu
-          default-active="2"
+          default-active="1-1"
           class="el-menu-vertical-demo"
           @open="handleOpen"
-          @close="handleClose">
+          @close="handleClose"
+          text-color="#fff"
+          active-text-color="#1890ff"
+          backgroundColor="#001529">
           <el-submenu index="1">
             <template slot="title">
               <i class="el-icon-location"></i>
@@ -58,49 +57,48 @@
           </el-menu-item>
         </el-menu>
       </el-aside>
-      <el-main>
-        曹俊
-      </el-main>
+      <el-container>
+        <el-header height="80px">Header</el-header>
+        <el-main>
+          <p>Main</p>
+          <p>Main</p>
+          <p>Main</p><p>Main</p>
+          <p>Main</p><p>Main</p>
+          <p>Main</p><p>Main</p>
+          <p>Main</p>
+          <p>Main</p>
+          <p>Main</p><p>Main</p><p>Main</p>
+        </el-main>
+      </el-container>
     </el-container>
-  </el-container>
 </template>
 
 <script>
-import Header from './header/Header'
 export default {
-  name: 'Layout',
-  components: {Header}
+  name: 'Layout1',
+  data () {
+    return {
+      height: {
+        height: window.innerHeight + 'px'
+      }
+    }
+  },
+  mounted () {
+    console.log(1)
+    console.log()
+  }
 }
 </script>
 
-<style>
-  body{
-    margin: 0px;
-  }
-  .el-header {
-    background-color: #409EFF;
-    color: #fff;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 60px;
-  }
-
-  .el-aside {
+<style scoped>
+  .el-header{
     background-color: #fff;
-    position: absolute;
-    left: 0px;
-    top: 60px;
-    width: 230px !important;
-    bottom: 0px;
-    overflow-y: auto;
-    border-right: solid 1px #e6e6e6;
   }
-  .el-main {
-    position: absolute;
-    top: 60px;
-    left: 230px;
-    right: 0px;
-    bottom: 0px;
+  .el-aside{
+    background-color: #001529;
+  }
+  .el-main::-webkit-scrollbar {
+    width: 4px;
   }
   .el-aside::-webkit-scrollbar {
     width: 1px;
@@ -108,12 +106,12 @@ export default {
   .el-menu {
     border-right: solid 0px #e6e6e6;
   }
-  .el-aside::-webkit-scrollbar-thumb {
+  .el-main::-webkit-scrollbar-thumb {
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
     background: rgba(0,0,0,0.2);
   }
-  .el-aside::-webkit-scrollbar-track {
+  .el-main::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
     border-radius: 0;
     background: rgba(0,0,0,0.1);
