@@ -2,11 +2,13 @@
     <el-container :style="height">
       <el-aside width="230px">
         <el-menu
-          default-active="/user"
+          :default-active="$route.path"
           class="el-menu-vertical-demo"
           text-color="#fff"
           router
+          @select="selectMenu"
           active-text-color="#1890ff"
+          active-background-color="#fff"
           backgroundColor="#001529">
           <template v-for="item in $router.options.router">
             <el-menu-item :index="item.path" :key="item.path">
@@ -44,6 +46,11 @@ export default {
   },
   mounted () {
     console.log(this.$router.options.router)
+  },
+  methods: {
+    selectMenu (path) {
+      console.log(path)
+    }
   }
 }
 </script>
