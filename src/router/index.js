@@ -5,6 +5,7 @@ import User from '../views/User'
 import Role from '../views/Role'
 import Plan from '../views/plan/Plan'
 import Project from '../views/project/Project'
+import Menu from '../views/Menu'
 
 Vue.use(VueRouter)
 
@@ -15,7 +16,8 @@ export default new VueRouter({
       path: '/system',
       children: [
         {path: 'user', component: User},
-        {path: 'role', component: Role}
+        {path: 'role', component: Role},
+        {path: 'menu', component: Menu}
       ]
     },
     {
