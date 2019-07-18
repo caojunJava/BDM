@@ -3,7 +3,7 @@
     <div style="height: 45px;line-height: 45px;">
       <el-row>
         <el-col :span="4"><div><i class="el-icon-s-fold" style="font-size:25px;line-height: 40px;"></i></div></el-col>
-        <el-col :span="2" :offset="18"><div>曹俊</div></el-col>
+        <el-col :span="2" :offset="18"><div>admin</div></el-col>
       </el-row>
     </div>
     <el-tabs style="width: 100%;" v-model="editableTabsValue" type="card" closable @tab-remove="removeTab" @tab-click="tabClick">
@@ -39,7 +39,6 @@ export default {
   },
   methods: {
     tabClick (tab) {
-      console.log(tab.name)
       this.$router.push(tab.name)
     },
     removeTab (tab) {

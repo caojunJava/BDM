@@ -1,21 +1,7 @@
 <template>
     <el-container :style="height">
       <el-aside width="200px">
-        <el-menu
-          :default-active="$route.path"
-          class="el-menu-vertical-demo"
-          mode="vertical"
-          text-color="#fff"
-          router
-          @select="selectMenu"
-          active-text-color="#1890ff"
-          backgroundColor="#001529">
-          <template v-for="item in $store.getters.menus">
-            <el-menu-item :index="item.path" :key="item.path">
-              <span slot="title">{{item.name}}</span>
-            </el-menu-item>
-          </template>
-        </el-menu>
+        <Aside/>
       </el-aside>
       <el-container>
         <el-header height="80px">
@@ -32,6 +18,7 @@
 
 <script>
 import Header from '../../components/layout/header/Header'
+import Aside from '../../components/layout/aside/Aside'
 export default {
   name: 'Layout',
   data () {
@@ -42,15 +29,13 @@ export default {
     }
   },
   components: {
+    Aside,
     Header
   },
   mounted () {
     // console.log(this.$route.path)
   },
   methods: {
-    selectMenu (path) {
-      // console.log(path)
-    }
   }
 }
 </script>
