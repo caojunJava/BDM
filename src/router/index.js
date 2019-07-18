@@ -1,21 +1,22 @@
 import Vue from 'vue'
-import Router from 'vue-router'
+import VueRouter from 'vue-router'
 
 import User from '../views/User'
+import Role from '../views/Role'
 
-Vue.use(Router)
+Vue.use(VueRouter)
 
-export default new Router({
+export default new VueRouter({
   mode: 'history',
-  router: [
+  routes: [
     {
       path: '/user',
-      name: '测试',
+      name: '用户管理',
       component: User
     },
     {
-      path: '/user22',
-      name: '测试22',
-      component: User
+      path: '/role',
+      name: '角色管理',
+      component: Role
     }]
 })

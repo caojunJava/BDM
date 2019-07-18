@@ -1,12 +1,10 @@
 <template>
-  <div>
-    用户信息
-  </div>
+  <div>角色信息</div>
 </template>
 
 <script>
 export default {
-  name: 'User'
+  name: 'Role'
 }
 </script>
 

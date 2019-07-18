@@ -6,7 +6,7 @@
 
 <script>
 import Login from './components/login/Login'
-import Layout from './components/layout/Layout'
+import Layout from './views/layout/Layout'
 export default {
   name: 'App',
   components: {
@@ -19,6 +19,7 @@ export default {
 <style>
   body{
     margin: 0px;
-    overflow-y: hidden
+    overflow-y: hidden;
+    background-color: #f2f2f2;
   }
 </style>
