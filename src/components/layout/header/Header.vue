@@ -28,11 +28,11 @@ export default {
       editableTabs: [{
         name: '用户管理',
         id: '1',
-        path: '/user'
+        path: '/system/user'
       }, {
         name: '角色管理',
         id: '2',
-        path: '/role'
+        path: '/system/role'
       }],
       tabIndex: 2
     }
